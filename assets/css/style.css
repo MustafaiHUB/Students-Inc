@@ -1,0 +1,261 @@
+/* === START GLOBAL === */
+:root {
+  --main-color: #121826;
+  --faid-color: #55597d;
+  --name-color: #adb3cc;
+  --selection-color: #3d3bff;
+  --main-transition: 300ms;
+}
+::selection {
+  color: var(--name-color);
+  background: var(--main-color);
+}
+body {
+  background: url(../images/bg.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--main-color);
+  overflow-x: hidden;
+}
+/* === END GLOBAL === */
+
+/* === START HEADER === */
+header img.logo {
+  height: 39px;
+}
+header .search {
+  --backgroundColor: #252a40;
+  --height: 47px;
+  min-width: 253px;
+  min-height: var(--height);
+  background: var(--backgroundColor);
+}
+header input#search {
+  background: var(--backgroundColor);
+  outline: none;
+  border: none;
+  width: 90%;
+  min-height: var(--height);
+}
+header .search img {
+  cursor: pointer;
+}
+header .navbar .navbar-nav a {
+  transition: var(--main-transition);
+}
+header .navbar .navbar-nav a:hover {
+  color: silver !important;
+}
+/* @media (min-width: 992px) { */
+header .navbar .navbar-nav a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #ffff;
+  bottom: 0;
+  transition: var(--main-transition);
+}
+header .navbar .navbar-nav a:hover::before {
+  width: 100%;
+}
+/* } */
+header .toggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
+}
+header .toggler .menu-toggler {
+  height: 30px;
+  filter: invert(1);
+}
+@media (max-width: 1199px) {
+  header .nav {
+    background-color: #41495f;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    --width: 350px;
+    width: var(--width);
+    left: calc(100% - var(--width));
+
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    transform: translateX(100%);
+    display: none;
+    opacity: 0;
+  }
+  header .open-nav {
+    display: flex !important;
+    animation: openNav var(--main-transition) ease-in-out forwards;
+  }
+  @keyframes openNav {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  header .close-btn {
+    cursor: pointer;
+    color: #ffff;
+    background-color: var(--selection-color);
+    width: 30px;
+    height: 30px;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    transition: var(--main-transition);
+  }
+  header .close-btn:hover {
+    background-color: red;
+  }
+  header .toggler {
+    display: block !important;
+  }
+  header .nav ul {
+    width: 100%;
+    flex-direction: column !important;
+    padding-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px !important;
+  }
+  header .nav .search {
+    width: 90%;
+    top: 10px;
+  }
+  header .profile {
+    justify-content: center;
+  }
+}
+@media (min-width: 1199px) {
+  header .open-nav {
+    display: none !important;
+  }
+  header .nav {
+    display: flex !important;
+    transform: translateX(0) !important;
+  }
+}
+header .profile .notification-img {
+  height: 23px;
+  cursor: pointer;
+}
+header .profile .notification::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+  top: 0;
+  right: 0;
+}
+header .profile .profile-info .profile-img {
+  height: 33px;
+  border-radius: 50%;
+}
+header .profile .profile-info .greeting {
+  color: #ffff;
+  font-size: 12px;
+}
+header .profile .profile-info .profile-name h2 {
+  color: var(--name-color);
+  font-size: 15px;
+}
+header .profile .profile-info .profile-name img.account-setting-toggler {
+  height: 20px;
+  cursor: pointer;
+}
+header .profile .profile-info .profile-text {
+  position: relative;
+}
+header .profile .profile-info .loging-info {
+  background-color: #55597d;
+  border-radius: 5px;
+  /* height: 0; */
+  opacity: 0;
+  transform: translateY(20px);
+  overflow: hidden;
+}
+header .profile .profile-info .loging-info-open {
+  animation: openSettings var(--main-transition) forwards ease-in-out;
+}
+@keyframes openSettings {
+  to {
+    display: block;
+    height: fit-content;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+header .profile .profile-info .loging-info a {
+  padding-left: 10px;
+  transition: var(--main-transition);
+}
+header .profile .profile-info .loging-info a:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #121826;
+  left: 0;
+  bottom: 0;
+}
+header .profile .profile-info .loging-info a:hover {
+  padding-left: 20px;
+}
+/* === END HEADER === */
+
+/* === START MAIN SECTION === */
+.main-section {
+  width: fit-content;
+  left: 5%;
+  margin-top: 7%;
+  padding: 20px 30px;
+  max-width: 100%;
+}
+.main-section .overlay {
+  background-color: #41495f;
+  border-radius: 10px;
+  opacity: 0.75;
+}
+@media (max-width: 992px) {
+  .main-section {
+    width: 100%;
+    left: 0;
+  }
+}
+.main-section .time img {
+  height: 20px;
+}
+.main-section p {
+  width: 800px;
+  max-width: 100%;
+}
+.main-section button {
+  background-color: #3d3bff;
+  border: none;
+  outline: none;
+  width: 350px;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0px 5px 10px rgba(183, 183, 255, 0.26),
+    inset 0px -10px 20px rgba(0, 0, 0, 0.6);
+
+  border-radius: 10px;
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+.main-section button:hover {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0px 5px 10px rgba(183, 183, 255, 0.26),
+    inset 0px -10px 20px rgba(0, 0, 0, 0.6), 0px -10px 20px rgba(0, 0, 0, 0.6),
+    0px 5px 10px rgba(183, 183, 255, 0.26);
+}
+/* === END MAIN SECTION === */

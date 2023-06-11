@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <link rel="icon" type="image/png" href="assets/images/Title-logo.png" />
+    <script type="module" src="assets/js/controller.js"></script>
+    <title>Students Inc.</title>
+  </head>
+  <body>
+    <!-- === START HEADER === -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/Frame.png" alt="Logo" class="logo" />
+          </a>
+
+          <button
+            class="toggler"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav"
+          >
+            <img
+              src="assets/images/menu.svg"
+              alt="menu-toggler"
+              class="menu-toggler"
+            />
+          </button>
+          <div class="nav flex-grow-1 align-items-center d-ls-flex" id="nav">
+            <div class="close-btn d-none rounded-1 mb-2 mt-3 me-2 ms-auto">
+              X
+            </div>
+            <div class="search ms-3 position-relative rounded-2 start-0">
+              <input
+                type="text"
+                name="Search"
+                id="search"
+                class="ps-2 text-white rounded-2 position-absolute start-0"
+                maxlength="2048"
+              />
+              <img
+                src="assets/images/Search.png"
+                alt="search"
+                class="search-icon position-absolute top-50 end-0 translate-middle"
+              />
+            </div>
+            <ul class="navbar-nav ms-lg-auto mb-lg-0 list-unstyled">
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white me-4 position-relative d-block pt-2 pb-2"
+                  >Career Library</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white me-4 position-relative d-block pt-2 pb-2"
+                  >Major Library</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-decoration-none text-white me-4 position-relative d-block pt-2 pb-2"
+                  >School Library</a
+                >
+              </li>
+            </ul>
+            <div class="profile d-flex align-items-center">
+              <div class="notification position-relative">
+                <img
+                  src="assets/images/Notification.svg"
+                  alt="Notification"
+                  class="notification-img"
+                />
+              </div>
+              <div class="profile-info d-flex align-items-center ms-3">
+                <img
+                  src="assets/images/Group.png"
+                  alt="Profile Pecture"
+                  class="profile-img"
+                />
+                <div class="profile-text ms-3">
+                  <div class="greeting">Welcome</div>
+                  <div
+                    class="profile-name d-flex justify-content-center align-items-center"
+                  >
+                    <h2 class="me-2">Daniel Estasmos</h2>
+                    <img
+                      src="assets/images/Arrow - Down 2.png"
+                      alt="arrow"
+                      class="account-setting-toggler"
+                    />
+                  </div>
+                  <div
+                    class="loging-info position-absolute start-0 top-100 w-100 mt-2"
+                  >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-white position-relative pt-2 pb-2 d-block"
+                      >Logout</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-white position-relative pt-2 pb-2 d-block"
+                      >Seetings</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- === END HEADER === -->
+
+    <!-- === START MAIN SECTION === -->
+    <section class="main-section position-relative">
+      <div class="overlay position-absolute start-0 top-0 w-100 h-100"></div>
+      <div class="container position-relative">
+        <div class="time d-flex align-items-center">
+          <img src="assets/images/clock.png" alt="clock" class="me-2" />
+          <span class="text-white">15 Minutes</span>
+        </div>
+        <h1 class="text-white mt-3 mb-3">
+          The Big Five: Your Gateway to Greater Discoveries!
+        </h1>
+        <p class="text-white">
+          Before we embark on this thrilling journey to uncover your unique
+          career path, we need to get to know you a little better. And what
+          better way than through the 'Big Five Personality Assessment'?
+
+          <br />
+          <br />
+
+          The Big Five is a well-respected psychological model that helps us
+          understand your unique personality traits. No, we're not mind-readers
+          (though that would be cool), we simply use science to help you
+          discover the best career paths suited to your personality.
+
+          <br />
+          <br />
+
+          This isn't a test, so there are no right or wrong answers. Just be
+          honest, because the more truthful you are, the more accurate your
+          career matches will be. And don't worry, we value your privacy and
+          your responses will be kept confidential. This introspective journey
+          will take about 15 minutes of your time. So, grab a snack, settle into
+          your favorite chair, and get ready to dive deep into the fascinating
+          world of you!
+        </p>
+
+        <button class="enter-btn mt-3">Enter</button>
+      </div>
+    </section>
+    <!-- === END MAIN SECTION === -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
