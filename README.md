@@ -10,6 +10,7 @@ Uses MVC architecture.
 
 # Code choices:
 
+- Added the page title logo.
 - Greeting (Welcome) make it in white to be more visible to the user.
 - The design is fully responsive.
 
